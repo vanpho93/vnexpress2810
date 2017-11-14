@@ -1,3 +1,7 @@
 const data = require('./data');
+const getNews = require('./d');
 
-console.log(data);
+const items = data.split('<item>');
+items.shift();
+
+console.log(items.map(item => getNews(item)));
